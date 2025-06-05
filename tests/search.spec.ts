@@ -12,6 +12,7 @@ test('site has title', async ({ page }) => {
 
    await  expect(cmenu).toBeVisible();
    await page.screenshot({ path: 'screenshot.png' });
+   
 
 });
 
