@@ -104,7 +104,7 @@ test('testing contacts page', async ({ page }) => {
   
   await contactPageFillLastName.click({button: 'right'});
   // Verify that the context menu is visible
-  await page.screenshot({path: 'screen_rightclk.png'});
+  //await page.screenshot({path: 'screen_rightclk.png'}); //since running from git actions commented
 });
 
 test('testing language select EN or FR', async ({ page }) => {

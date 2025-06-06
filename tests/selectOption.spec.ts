@@ -12,11 +12,10 @@ test('test', async ({ page }) => {
   for (let i = 0; i < 5; i++) {
   await listValue.selectOption({index: i});
   //takes screen shots for each list item select for visible validation
-  //await page.screenshot({path: 'li' + i + '.png'});
+  //await page.screenshot({path: 'li' + i + '.png'}); //commented due running from git actions
   
   //await listValue.selectOption({index: 2});
   //await page.screenshot({path: 'li2.png'});
   }
-  //const value = await page.$eval('//*[@id="filters"]/form[1]/div/select',el => el.nodeValue);
-  //console.log(value);*/
+  
 });

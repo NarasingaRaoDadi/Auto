@@ -11,7 +11,7 @@ test('site has title', async ({ page }) => {
    await cmenu.click({button:'right'});
 
    await  expect(cmenu).toBeVisible();
-   await page.screenshot({ path: 'screenshot.png' });
+   //await page.screenshot({ path: 'screenshot.png' }); //running from git actions so commented
    
 
 });
