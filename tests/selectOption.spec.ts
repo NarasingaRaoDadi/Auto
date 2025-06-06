@@ -8,14 +8,15 @@ test('test', async ({ page }) => {
   await expect(page).toHaveURL(/.*testing.*/);
 
   const listValue = page.locator('//*[@id="filters"]/form[1]/div/select')
-  const listCount = await listValue.count();
-  //console.log (listCount);
-  console.log(listCount);
-  await listValue.selectOption({index: 0});
-  await page.screenshot({path: 'li1.png'});
-  await listValue.selectOption({index: 2});
-  await page.screenshot({path: 'li2.png'});
-
+  
+  for (let i = 0; i < 5; i++) {
+  await listValue.selectOption({index: i});
+  //takes screen shots for each list item select for visible validation
+  //await page.screenshot({path: 'li' + i + '.png'});
+  
+  //await listValue.selectOption({index: 2});
+  //await page.screenshot({path: 'li2.png'});
+  }
   //const value = await page.$eval('//*[@id="filters"]/form[1]/div/select',el => el.nodeValue);
-//console.log(value);
+  //console.log(value);*/
 });
